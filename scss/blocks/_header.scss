@@ -1,0 +1,39 @@
+.header {
+    height: 75px;
+    background-color: $nice-black;
+    @include position(flex, normal, center);
+}
+
+.header-container {
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0 16px;
+    
+    @include tablet {
+        width: 704px;
+    }
+
+    @include mobile {
+        width: 343px;
+    }
+}
+
+.header__menu-list {
+    @include position(flex, normal, center);
+
+    @include mobile {
+        .menu-list__item:not(:first-child) {
+            display: none;
+        }
+    }
+}
+
+.menu-list__item:not(:last-child) {
+    margin-right: 25px;
+
+    @include mobile {
+        margin-right: 0;
+    }
+}

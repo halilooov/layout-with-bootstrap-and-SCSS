@@ -1,0 +1,140 @@
+.footer {
+    @include position(flex, center, normal);
+    flex-wrap: wrap;
+}
+
+.subscribe-content {
+    background-image: url(../img/background-footer.jpg);
+    background-repeat: no-repeat;
+    min-height: 448px;
+    @include position(flex, space-around, center);
+    max-width: 1600px;
+    width: 100%;
+
+    @include tablet {
+        flex-direction: column;
+        max-width: 768px;
+        min-height: 693px;
+        background-image: url(../img/background-footer-tablet.jpg);
+    }
+}
+
+.subscribe-content__info {
+    max-width: 360px;
+    width: 50%;
+    text-align: center;
+
+    @include tablet {
+        width: 100%;
+    }
+}
+
+.subscribe-content__quote {
+    @include font-settings(20px, 400, #222224);
+    margin-top: 20px;
+}
+
+.subscribe-content__btn {
+    max-width: 360px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+
+    @include tablet {
+        width: 100%;
+    }
+}
+
+.subscribe-content__title {
+    @include font-settings(18px, 400, #222224);
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+.subscribe {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+.footer__email {
+    width: 60%;
+    height: 50px;
+    border: none;
+    background-color: #e1e1e1;
+    border-radius: 27px 0 0 27px;
+    padding: 0 0 0 22px;
+    margin-top: 32px;
+    line-height: 50px;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+.footer__btn {
+    background-color: $deep-pink;
+    width: 30%;
+    height: 50px;
+    border-radius: 0 27px 27px 0;
+    outline: none;
+    @include font-settings(14px, 400, #fff);
+}
+
+.copyright {
+    background-color: #222224;
+    min-height: 80px;
+    width: 100%;
+    @include position(flex, normal, center);
+}
+
+.copyright-container {
+    @include position(flex, space-between, normal);
+    max-width: 1140px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 16px;
+    
+    @include tablet {
+        max-width: 704px;
+    }
+
+    @include mobile {
+        max-width: 343px;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.copyright__text {
+    @include font-settings(16px, 400, $color-white);
+    line-height: 32px;
+    
+    @include tablet {
+        min-width: 251px;
+    }
+
+    @include mobile {
+        min-width: 180px;
+    }
+}
+
+.copyright__social-list {
+    @include position(flex, flex-end, normal);
+    width: 200px;
+}
+
+.copyright__social-link {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    margin: 0 7px 0 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+.copyright__social-link:nth-child(2) {
+    background-color: $deep-pink;
+}

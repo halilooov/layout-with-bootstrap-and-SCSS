@@ -1,0 +1,83 @@
+.name {
+    background-color: $dull-pink;
+    @include position(flex, normal, center);
+    margin: 0 auto;
+    max-width: 1600px;
+
+    @include tablet {
+        max-width: 768px;
+    }
+
+    @include mobile {
+        height: 375px;
+        min-width: 236px;
+        max-width: 375px;
+        justify-content: center;
+    }
+}
+
+.name__img {
+    max-width: 800px;
+    width: 50%;
+    height: auto;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.name__text {
+    width: 50%;
+}
+
+.name__title {
+    text-transform: uppercase;
+    position: relative;
+    margin-left: 64 / 800 * 100%;
+    @include font-settings(32px, 700, $nice-black);
+    width: 660 / 800 * 100%;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-color: $deep-pink;
+        width: 12px;
+        height: 100%;
+        left: -16px;
+        
+
+        @include mobile {
+            max-height: 62px;
+            height: 100%;
+        }
+    }
+
+    @include tablet {
+        font-size: 24px;
+        width: 290 / 384 * 100%;
+        margin-left: 40 / 384 * 100%;
+    }
+
+    @include mobile {
+        font-size: 20px;
+        min-width: 236px;
+        margin: 0;
+    }
+}
+
+.the-brand {
+    font-size: 48px;
+    font-weight: 900;
+    
+    @include tablet {
+        font-size: 44px;
+    }
+
+    @include mobile {
+        font-size: 38px;
+    }
+}
+
+.fashion {
+    color: $deep-pink;
+}

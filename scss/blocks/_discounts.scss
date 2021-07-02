@@ -1,0 +1,73 @@
+.discounts {
+    margin: 63px auto 0;
+
+    @include tablet {
+        margin-top: 19px;
+    }
+
+    @include mobile {
+
+    }
+}
+
+.discounts-container {
+    max-width: 1140px;
+    width: 100%;
+}
+
+.discounts__list {
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.discounts__item {
+    max-height: 260px;
+    width: 360 / 1140 * 100%;
+    display: flex;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include mobile {
+        width: 100%;
+        margin-top: 32px;
+    }
+}
+
+.discounts__img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+}
+
+.discounts__text {
+    text-transform: uppercase;
+    @include font-settings(16px, 400, #fff);
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.discounts__text-styled {
+    @include font-settings(24px, 700, $deep-pink);
+}
+
+.discounts__item-4 {
+    position: relative;
+    display: flex;
+    max-height: 180px;
+    margin-top: 30px;
+}
+
+.discounts__img-4 {
+    max-width: 1140px;
+    width: 100%;
+    height: auto;
+}

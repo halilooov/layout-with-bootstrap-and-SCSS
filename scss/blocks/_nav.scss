@@ -1,0 +1,40 @@
+.nav {
+    width: 232px;
+    height: 764px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    
+    @include tablet {
+        display: none;
+    }
+}
+
+.nav__list {
+    margin: 24px 0 0 33px;
+}
+
+.nav__title {
+    @include font-settings(14px, 700, #000);
+    text-transform: uppercase;
+    margin: 37px 0 0 33px;
+}
+
+.nav-item {
+    margin: 20px 0 0 0;
+}
+
+.nav-item__title {
+    text-transform: uppercase;
+    @include font-settings(14px, 400, $deep-pink);
+}
+
+.nav-list__item {
+    margin-left: 24px;
+    padding-top: 11px;
+}
+
+.nav-item__subtitle {
+    text-transform: capitalize;
+    @include font-settings(14px, 400, #6f6f6f);
+}

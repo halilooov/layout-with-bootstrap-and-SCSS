@@ -1,0 +1,37 @@
+.offers {
+    background-color: #222224;
+    min-height: 341px;
+
+    @include tablet {
+        min-height: 610px;
+    }
+}
+
+.offers__list {
+    margin: 0 auto;
+    max-width: 1140px;
+    @include position(flex, center, space-between);
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.offers__item {
+    margin: 103px 0 0 0;
+    width: 360 / 1140 * 100%;
+
+    @include tablet {
+        margin-top: 48px;
+        width: 360 / 704 * 100%;
+        min-width: 350px;
+    }
+}
+
+.offers__name {
+    @include font-settings(20px, 400, $color-white);
+    margin-top: 20px
+}
+
+.offers__description {
+    @include font-settings(14px, 300, $color-white);
+    margin: 16px 32px 0;
+}
